@@ -77,9 +77,9 @@ services:
   postgres:
       image: postgres:13
       environment:
-        POSTGRES_USER: airflow
-        POSTGRES_PASSWORD: airflow
-        POSTGRES_DB: airflow
+        POSTGRES_USER: {{cookiecutter.postgres_user}}
+        POSTGRES_PASSWORD: {{cookiecutter.postgres_password}}
+        POSTGRES_DB: {{cookiecutter.postgres_db}}
       volumes:
         - postgres-db-volume:/var/lib/postgresql/data
       healthcheck:
@@ -229,8 +229,8 @@ services:
         AIRFLOW_UID: 50000
         _AIRFLOW_DB_MIGRATE: 'true'
         _AIRFLOW_WWW_USER_CREATE: 'true'
-        _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
-        _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
+        _AIRFLOW_WWW_USER_USERNAME: {{cookiecutter.airflow_username}}
+        _AIRFLOW_WWW_USER_PASSWORD: {{cookiecutter.airflow_password}}
         _PIP_ADDITIONAL_REQUIREMENTS: ''
       user: "0:0"
       volumes:
@@ -279,9 +279,9 @@ services:
     ports:
       - "27017:27017"
     environment:
-      MONGO_INITDB_DATABASE: test
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: admin
+      MONGO_INITDB_DATABASE: {{cookiecutter.mongo_init_db}}
+      MONGO_INITDB_ROOT_USERNAME: {{cookiecutter.mongo_root_username}}
+      MONGO_INITDB_ROOT_PASSWORD: {{cookiecutter.mongo_root_password}}
 
 volumes:
     postgres-db-volume:

@@ -1,0 +1,12 @@
+{
+    "directory_name":"data_stack",
+    "project_name":"ansible_DEs_aid",
+    "postgres_user":"postgres",
+    "postgres_password":"postgres",
+    "postgres_db":"test_pg",
+    "airflow_username":"airflow",
+    "airflow_password":"airflow",
+    "mongo_init_db":"test_mongo",
+    "mongo_root_username":"admin",
+    "mongo_root_password":"admin"
+}
