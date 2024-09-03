@@ -19,4 +19,4 @@ you can run the playbook with `sh run_ansible.sh` inside a project you created w
 `localhost:27017`: MongoDB<br />
 `localhost:6379`: Redis<br />
 `localhost:9092`: Kafka<br />
-
+`localhost:9042`: Cassandra<br />
