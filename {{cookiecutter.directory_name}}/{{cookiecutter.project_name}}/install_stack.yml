@@ -2,23 +2,10 @@
 - hosts: all
   tasks:
 
-    - name: make stack dir
-      shell: mkdir stack
-
-    - name: copy dockerfile
+    - name: copy artifacts
       copy:
-        src: Dockerfile
-        dest: stack/Dockerfile
-
-    - name: copy docker compose
-      copy:
-        src: docker-compose.yml
-        dest: stack/docker-compose.yml
-
-    - name: copy requirements
-      copy:
-        src: requirements.txt
-        dest: stack/requirements.txt
+        src: .
+        dest: stack
 
     - name: build stack
       shell: cd stack | sudo docker compose build

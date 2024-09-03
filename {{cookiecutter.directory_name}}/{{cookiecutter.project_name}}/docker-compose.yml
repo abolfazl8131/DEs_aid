@@ -283,8 +283,21 @@ services:
       MONGO_INITDB_ROOT_USERNAME: {{cookiecutter.mongo_root_username}}
       MONGO_INITDB_ROOT_PASSWORD: {{cookiecutter.mongo_root_password}}
 
+  cassandra:
+    image: cassandra:latest
+    container_name: cassandra-container
+    ports:
+      - "9042:9042"
+    environment:
+      - CASSANDRA_USER={{cookiecutter.cassandra_user}}
+      - CASSANDRA_PASSWORD={{cookiecutter.cassandra_password}}
+    volumes:
+      - cassandra-data:/var/lib/cassandra
+  
+
 volumes:
     postgres-db-volume:
+    cassandra-data:
 
 
     

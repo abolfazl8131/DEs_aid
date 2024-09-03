@@ -8,5 +8,7 @@
     "airflow_password":"airflow",
     "mongo_init_db":"test_mongo",
     "mongo_root_username":"admin",
-    "mongo_root_password":"admin"
+    "mongo_root_password":"admin",
+    "cassandra_user":"admin",
+    "cassandra_password":"admin"
 }
