@@ -6,6 +6,8 @@ you can customize it as a cookie-cutter project according to your company's requ
 1. MongoDB
 2. Apache Airflow
 3. Apache Kafka
+4. Postgresql
+5. Redis
    
 # How to Use it?
 you can clone the project by `git clone` and inside a directory, you run `cookiecutter .`<br />
