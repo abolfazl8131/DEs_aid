@@ -14,3 +14,9 @@ you can clone the project by `git clone` and inside a directory, you run `cookie
 you will answer the questions we have asked and the project will be created.<br />
 you can run the playbook with `sh run_ansible.sh` inside a project you created with a cookie-cutter.
 
+## Services address
+`localhost:8080`: Airflow WebServer<br />
+`localhost:27017`: MongoDB<br />
+`localhost:6379`: Redis<br />
+`localhost:9092`: Kafka<br />
+
